@@ -7,6 +7,8 @@ WORKDIR /var/www/html
 RUN unzip bonativo.zip
 RUN rm -rf bonativo.zip &&\
     cp -rf bonativo/* . &&\
-    rm -rf bonativo 
+    rm -rf bonativo &&\ 
+    mkdir /var/www/htmk/secure &&/
+    touch rajat.txt
 EXPOSE 80
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
